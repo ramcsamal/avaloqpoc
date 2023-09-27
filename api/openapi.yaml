@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Avaloq POC API
+  version: 1.0.0
+paths:
+  /api/v1/execute:
+    get:
+      summary: Executes the command from the config file
+      responses:
+        '200':
+          description: Command executed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output:
+                    type: string
+        '500':
+          description: Error executing command
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string

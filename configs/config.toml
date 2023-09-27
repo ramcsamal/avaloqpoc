@@ -1,0 +1,2 @@
+[command]
+execute = "echo I am running from the commandline..."
